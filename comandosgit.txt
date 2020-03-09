@@ -1,0 +1,99 @@
+Configurando nome de usuário
+$ git config --global user.name Leonardo Aguiar
+
+Configurando e-mail de usuário
+$ git config --global user.email leonardoagqz@gmail.com
+
+Criando chave SSH para o e-mail do usuário
+$ ssh-keygen -t rsa C "leonardoagqz@gmail.com"
+
+Copiar a chave SSH
+$ clip <~/.ssh/id_rsa.pub
+
+Cloando repositório
+$ git clone git@github.com:leonardoagqz/git-githubPu
+
+Verificar Status
+$ git status
+
+Adicionar arquivos ao stage
+$ git add nomearquivo.extensao
+
+Adicionar todos os arquivos ao stage
+$ git add .
+
+Adicionar um arquivo que esta listado no .gitignore
+$ git add -f arquivo_no/0gitignore.txt
+
+Gravar mudanças no repositório
+$ git commit -m "Mensagem do commit"
+
+Verificar histórioco de alterações gravadas no repositório
+$ git log
+
+Adicionando repositório remoto
+$ git remote add origin git@github.com:leonardoagqz/git-githubPu
+
+Enviando alteraçõe para o Github
+$ git push origin master
+
+Clonando repositório do Github
+$ git clone git@github.com:leonardoagqz/git-githubPu
+
+Listar conteúdo diretório
+$ls -lha
+
+Remover arquivos
+$ git rm nomearquivo.extensao
+
+Renomear um arquivo
+$ git mv arquivo.txt arquivo1.txt
+
+Mover um arquivo
+$ git mv caminho/arquivo.txt caminhonovo/pasta
+
+Desfazer mudanças não rastreadas (antes do Add ou Add .) 
+Ficando como esta no GitHub repositório remoto
+$ git checkout arquivo.txt
+
+Retirando mudanças da área de stage (retira do Add ou Add .)
+$ git reset arquivo.txt
+
+Desfazendo Ultimo commit sem mudar as alterações feitas nos arquivos
+$ git reset HEAD~1 
+
+Desfazer Ultimo commit removendo as alterações feitas nos arquivos
+$ git reset --hard HEAD~1
+
+Desfazer alterações nos arquivos do Ultimo commit
+$ git revert HEAD
+
+Desfazer alterações em um commit especifico
+$ git revert iddocommit ex: git revert 11a5b
+
+Criar novo branch
+$ git checkout -b suporte
+
+Remover um brach
+$ git checkout -d suporte
+
+Mudar de Branch
+$ git checkout master ou git checkout suporte
+
+Atualizar repositório local de acordo como repositório remoto
+Atualiza os arquivos no Branch local atual
+$ git pull <origem> <branch>
+
+Sincroniza o repositório local com o remoto refazendo a base
+$ git pull --rebase <origem> <branch>
+
+Mesclar as modificações da branch suporte na master
+$ git merge suporte
+Ex: após ter realizado o git push origin suporte, e git checkout master, execute git merge suporte, 
+e git push origin master
+
+Exibir histório de comandos executados no Git
+$ history
+
+
+
