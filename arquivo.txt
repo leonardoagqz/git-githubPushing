@@ -1,2 +1,6 @@
 teste1
+<<<<<<< HEAD
 teste2
+=======
+teste5
+>>>>>>> suporte
